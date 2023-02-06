@@ -51,11 +51,11 @@ while True:
 
         #HW3: add-> order["items"] (.appened())
         # {"name: "Soup", "Quantity": 10, "total: {"amount": 450, "currency": "MDL"}
-        currency = "MDL"
+        
         order["name"].append(food[selected_i]['name'])
         order["quantity"].append( quantity)
         order["total"]["amount"].append(price_per_item) 
-        order["total"]["currency"].append(currency) 
+        order["total"]["currency"].append(food[selected_i]['price']['currency']) 
         print("Your order:",order)
 
         input("#" * 50)
