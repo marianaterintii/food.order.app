@@ -1,11 +1,16 @@
 
 from restaurant import * # * importeaza tot
 # contains order data
-order = { 
-    "items": []
-}
 
-order2 = {"name": [], "quantity": [], "total": {"amount": [], "currency": []}}
+order = {
+    "name": [], 
+    "quantity": [], 
+    "total": {
+        "amount": [], 
+        "currency": []
+        }
+        }
+
 
 #################
 food = loadFood()
@@ -45,17 +50,12 @@ while True:
             input("#" * 50)
 
         #HW3: add-> order["items"] (.appened())
-        # {
-        # "name: "Soup", "Quantity": 10, "total: {"amount": 450, "currency": "MDL"}
-
-        order["items"].append(food[selected_i]['name'])
-        order["items"].append( quantity)
-        order["items"].append(price_per_item) 
+        # {"name: "Soup", "Quantity": 10, "total: {"amount": 450, "currency": "MDL"}
+        currency = "MDL"
+        order["name"].append(food[selected_i]['name'])
+        order["quantity"].append( quantity)
+        order["total"]["amount"].append(price_per_item) 
+        order["total"]["currency"].append(currency) 
         print("Your order:",order)
-
-        order2["name"].append(food[selected_i]['name'])
-        order2["quantity"].append( quantity)
-        #order2["total"].append(price_per_item) 
-        print("Your order:",order2)
 
         input("#" * 50)
